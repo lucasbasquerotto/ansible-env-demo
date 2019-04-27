@@ -1,0 +1,32 @@
+env:
+  cloud_type: "digital_ocean"
+  cloud_layer: "layer1"
+  shutdown: 0
+  cloud_region: "nyc1"
+  cloud_api_token: "MY_DO_TOKEN"
+  cloud_host_user: "host"
+  cloud_host_pass: "def456"
+  cloud_host_ssh_public_keys: 
+  - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDd+PSVvCsSiE/k1IBeG1aL/l4eZKTGcgzZ9xfogI+UONcrdxymX/goaORKMQwl6W/SPAW2yg0BN+o17HkIxssTptCHpX8czfkXOW4/wW26vq7w4X9lueihnrp3IzKlYLtfPCf69uK58bKRWZuuTz8EJYuVBV73GdcM4LHoRf+3FOew+rGZwKrMBsIN63WK68+obzaBz2gTYZxJAnyzOWPIK2c+nlWHkjMHlN/3Eyy1fo08GJKNbhH83YFjc9gfEQYQiCq2wLlAaHqFOqGLsNzn2to3P4DkVaKyL6qWSIrpIuxFryd4hb94Qx4iHCghvvvc+JpF+iZlO3Tko4/Q0Gy9 ansible@dev-ubuntu-01"
+  
+  dns_type: "cloudflare"
+  cloudflare_email: "cf.mail@example.com"
+  cloudflare_token: "MY_CF_TOKEN"
+  zone: "example.com"
+  dns_record: "forum"
+
+  containers:
+    app: {}
+    db_master: {}
+    redis_master: {}
+    web: {}
+    default:
+      hostname: "forum.example.com"
+      email: "main@forum.example.com"
+      db_pass: "MY_SECRET_PASS"
+      smtp_address: smtp.sendgrid.net
+      smtp_port: "587"
+      smtp_user_name: "apikey"
+      smtp_pass: "MY_SMTP_PASS"
+      use_ssl: "{{ true | bool }}"
+      ssl_email: "ssl@forum.example.com"
