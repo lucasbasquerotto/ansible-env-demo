@@ -24,7 +24,7 @@ env:
       hostname: "forum.example.com"
       email: "main@forum.example.com"
       db_pass: "MY_SECRET_PASS"
-      smtp_address: smtp.sendgrid.net
+      smtp_address: "smtp.sendgrid.net"
       smtp_port: "587"
       smtp_user_name: "apikey"
       smtp_pass: "MY_SMTP_PASS"
